@@ -14,8 +14,8 @@
 <body class="shower list">
 
 	<header class="caption">
-		<h1>Shower Presentation Engine</h1>
-		<p>Yours Truly, Famous Inc.</p>
+		<h1>Стандарт WAI-ARIA и использование ARIA-атрибутов</h1>
+		<p>Ольга Болотова</p>
 	</header>
 
 	<section class="slide preview" id="cover">
@@ -135,28 +135,29 @@
 
 	<section class="slide roles">
 		<h2>Атрибуты ролей</h2>
-		<p>Семантически эквивалентное имя роли может не совпадать с именем тега.</b></p>
-		<p class="next">
+		<p class="">
 			<code>&lt;header&gt;Хедер&lt;/header&gt;</code>
 		</p>
-		<p class="next">
+		<p class="">
 			<code>&lt;div role="bunner"&gt;Хедер&lt;/div&gt;</code>
 		</p>
-		<p class="next note"><b>Важно!</b>
-		</br> По возможности используйте родную семантику.
-		</br>Переопределять семантику тега нежелательно.
-		</p>
+		<p class="next">Семантически эквивалентное имя роли может не совпадать с именем тега.</b></p>
 		<style>
 		</style>
 	</section>
 
 	<section class="slide roles">
 		<h2>Атрибуты ролей</h2>
-		<p><b>Плохо</b></p>
-		<p class="next">
+		<p><b>Плохо:</b></p>
+		<p class="">
 			<code>&lt;nav role="navigation"&gt;Главное меню&lt;/nav&gt;</code>
 		</p>
 		<p>Не надо так!
+		</p>
+		<p class="next note"><b>Важно!</b>
+		</br> По возможности используйте родную семантику.
+		</br>Переопределять семантику тега нежелательно.
+	</br>У элемента может быть только одна роль.
 		</p>
 		<style>
 		</style>
@@ -165,16 +166,45 @@
 	<section class="slide roles">
 		<h2>Атрибуты ролей</h2>
 		<p>Был параграфом:</p>
-		<p class="next">
+		<p class="">
 			<code>&lt;p&gt;Текст&lt;/p&gt;</code>
 		</p>
 		<p>Стал заголовком первого уровня:</p>
-		<p class="next">
-			<code>&lt;div role="heading" aria-level="1"&gt;Текст&lt;/div&gt;</code>
+		<p class="">
+			<code>&lt;p role="heading" aria-level="1"&gt;Текст&lt;/p&gt;</code>
 		</p>
 		<style>
 		</style>
 	</section>
+
+	<section class="slide roles">
+			<h2>Атрибуты ролей</h2>
+			<p class=" note"><b>Важно!</b>
+			</br> По возможности используйте родную семантику.
+			</br>Переопределять семантику тега нежелательно.
+		</br>У элемента может быть только одна роль.
+			</p>
+			<style>
+			</style>
+		</section>
+
+	<!-- <section class="slide roles">
+		<h2>Атрибуты ролей</h2>
+		<pre class="">
+			<code>&lt;div&gt;Список&lt;/div&gt;</code>
+				<code>    &lt;div&gt;Пункт 1&lt;/div&gt;</code>
+				<code>    &lt;div&gt;Пункт 2&lt;/div&gt;</code>	
+		</pre>
+		 <p class="next">
+		<pre class="">
+				<code>&lt;div role="menubar"&gt;Список&lt;/div&gt;</code>
+					<code>    &lt;div &gt;Пункт 1&lt;/div&gt;</code>
+					<code>    &lt;div&gt;Пункт 2&lt;/div&gt;</code>	
+			</pre>
+		</p>
+		<style>
+		</style>
+	</section> -->
 		<!-- <section class="slide properties">
 			<h2>Атрибуты свойств</h2>
 			<p>Отвечают на вопросы: </br><b>Что это за элемент? Какое у него предназначение?</b></p>
@@ -223,7 +253,7 @@
 
 			<section class="slide states">
 					<h2>Атрибуты состояний</h2>
-					<!-- <p>Префикс <b>aria-*</b></p> -->
+					<p>Префикс <b>aria-*</b></p>
 					<p class="">
 						<code>&lt;div hidden&gt;Контент&lt;/div&gt;</code>
 					</p>
@@ -237,14 +267,57 @@
 					</style>
 				</section>
 
+				<section class="slide">
+						<img src="pictures/w3c.png" alt="">
+						<style>
+							.questions {
+								position: relative;
+							}
+				
+							.questions h2{
+								position: absolute;
+								right: 100px;
+								bottom: 130px;
+								display: inline-block;
+								margin: 30px 0 0;
+								color: #0095d5;
+								font-size: 60px;
+								background-color: #fff;
+							}
+							
+							.questions__img {
+								width: 100%;
+							}
+						</style>
+					</section>
+					<section class="slide">
+							<h2 class="shout shrink">И это все?</h2>
+						</section>
+
+						<section class="slide tree">
+								<img src="pictures/screen.png" alt="">
+								<style>
+									.tree {
+										position: relative;
+									}
+								.tree img {
+									position: absolute;
+									left: 0;
+									top: 50%;
+									transform: translateY(-50%);
+									width: 100%;
+								}
+								</style>
+								</section>
+
 	<section class="slide">
 		<h2>Выводы</h2>
-			<ol>
+			<ul>
 				<li class='next'>Если вы можете использовать родную семантику HTML или встроенный атрибут без использования ARIA-атрибутов, чтобы сделать элемент доступным, то сделайте это.</li>
 				<li class='next'>Не меняйте родную семантику, если только в этом нет сильной необходимости.</li>
 				<li class='next'>Добавление ARIA-роли переопределяет нативные семантическую роль тега.</li>
-				<li class='next'></li>Эрия предоставляет возможности, которых еще нет в родном HTML.</li>
-			</ol>
+				
+			</ul>
 	
 			<style>
 				.groups__item {
@@ -253,6 +326,24 @@
 				}
 			</style>
 		</section>
+
+		<section class="slide">
+				<h2>Выводы</h2>
+					<ul start="1">
+		
+						<li class='next'>Эрия предоставляет возможности, которых еще нет в родном HTML.</li>
+						<li class='next'>У элемента может быть только одна роль.</li>
+					</ul>
+			
+					<style>
+						.groups__item {
+							font-size: 36px;
+							font-weight: bold;
+						}
+					</style>
+				</section>
+
+				
 
 	<section class="slide">
 			<h2>Напиши мне</h2>
