@@ -87,6 +87,10 @@
 	</section>
 
 	<section class="slide">
+		<h2 class="shout shrink">WAI-ARIA</h2>
+	</section>
+
+	<section class="slide">
 		<h2>WAI-ARIA</h2>
 		<figure>
 			<blockquote>
@@ -95,6 +99,160 @@
 			<figcaption>Wikipedia</figcaption>
 		</figure>
 	</section>
+
+	<section class="slide groups">
+		<h2>Виды ARIA-атриубтов</h2>
+		<ol>
+			<li class='next groups__item'>Роли</li>
+			<li class='next groups__item'>Свойства</li>
+			<li class='next groups__item'>Состояния</li>
+		</ol>
+
+		<style>
+			.groups__item {
+				font-size: 36px;
+				font-weight: bold;
+			}
+		</style>
+	</section>
+
+	<section class="slide roles">
+		<h2>Атрибуты ролей</h2>
+		<p>Отвечают на вопросы: </br><b>Что это за элемент? Какое у него предназначение?</b></p>
+		<p class="next">
+			<code>&lt;nav&gt;Главное меню&lt;/nav&gt;</code>
+		</p>
+		<p class="next">
+			<code>&lt;div role="navigation"&gt;Главное меню&lt;/div&gt;</code>
+		</p>
+		<!-- <p class="next note"><b>Важно!</b>
+		</br> По возможности используйте родную семантику.
+		</br>Переопределять семантику тега нежелательно.
+		</p> -->
+		<style>
+		</style>
+	</section>
+
+	<section class="slide roles">
+		<h2>Атрибуты ролей</h2>
+		<p>Семантически эквивалентное имя роли может не совпадать с именем тега.</b></p>
+		<p class="next">
+			<code>&lt;header&gt;Хедер&lt;/header&gt;</code>
+		</p>
+		<p class="next">
+			<code>&lt;div role="bunner"&gt;Хедер&lt;/div&gt;</code>
+		</p>
+		<p class="next note"><b>Важно!</b>
+		</br> По возможности используйте родную семантику.
+		</br>Переопределять семантику тега нежелательно.
+		</p>
+		<style>
+		</style>
+	</section>
+
+	<section class="slide roles">
+		<h2>Атрибуты ролей</h2>
+		<p><b>Плохо</b></p>
+		<p class="next">
+			<code>&lt;nav role="navigation"&gt;Главное меню&lt;/nav&gt;</code>
+		</p>
+		<p>Не надо так!
+		</p>
+		<style>
+		</style>
+	</section>
+
+	<section class="slide roles">
+		<h2>Атрибуты ролей</h2>
+		<p>Был параграфом:</p>
+		<p class="next">
+			<code>&lt;p&gt;Текст&lt;/p&gt;</code>
+		</p>
+		<p>Стал заголовком первого уровня:</p>
+		<p class="next">
+			<code>&lt;div role="heading" aria-level="1"&gt;Текст&lt;/div&gt;</code>
+		</p>
+		<style>
+		</style>
+	</section>
+		<!-- <section class="slide properties">
+			<h2>Атрибуты свойств</h2>
+			<p>Отвечают на вопросы: </br><b>Что это за элемент? Какое у него предназначение?</b></p>
+			<p class="next">
+				<code>&lt;div role="navigation"&gt;Главное меню&lt;/div&gt;</code>
+			</p>
+			<p class="next">
+				<code>&lt;nav&gt;Главное меню&lt;/nav&gt;</code>
+			</p>
+			<p class="next note"><b>Важно!</b>
+			</br> По возможности используйте родную семантику.
+			</br>Переопределять семантику тега нежелательно.
+			</p>
+			<style>
+				.groups__item {
+					font-size: 36px;
+					font-weight: bold;
+				}
+			</style> -->
+		</section>
+
+		<section class="slide properties">
+				<h2>Атрибуты свойств</h2>
+				<p>Префикс <b>aria-*</b></p>
+				<img class="properties__img next" src="pictures/modal.jpg" role="presentation">
+				<style>
+					.properties__img {
+						height: 300px;
+					}
+				</style>
+			</section>
+
+
+		<section class="slide properties">
+			<h2>Атрибуты свойств</h2>
+			<p>
+				<code>&lt;button type="button"&gt;X&lt;/button&gt;</code>
+			</p>
+			<p class="next">
+				<code>&lt;button type="button"&gt;Закрыть модальное окно&lt;/button&gt;</code>
+			</p>
+			<p class="next">
+				<code>&lt;button type="button" aria-label="Закрыть модальное окно"&gt;X&lt;/button&gt;</code>
+			</p>
+		</section>
+
+			<section class="slide states">
+					<h2>Атрибуты состояний</h2>
+					<!-- <p>Префикс <b>aria-*</b></p> -->
+					<p class="">
+						<code>&lt;div hidden&gt;Контент&lt;/div&gt;</code>
+					</p>
+					<p class="">
+						<code>&lt;div aria-hidden=”true”&gt;Контент&lt;/div&gt;</code>
+					</p>
+					<p class="">
+						<code>&lt;div hidden aria-hidden=”true”&gt;Контент&lt;/div&gt;</code>
+					</p>
+					<style>
+					</style>
+				</section>
+
+	<section class="slide">
+		<h2>Выводы</h2>
+			<ol>
+				<li class='next'>Если вы можете использовать родную семантику HTML или встроенный атрибут без использования ARIA-атрибутов, чтобы сделать элемент доступным, то сделайте это.</li>
+				<li class='next'>Не меняйте родную семантику, если только в этом нет сильной необходимости.</li>
+				<li class='next'>Добавление ARIA-роли переопределяет нативные семантическую роль тега.</li>
+				<li class='next'></li>Эрия предоставляет возможности, которых еще нет в родном HTML.</li>
+			</ol>
+	
+			<style>
+				.groups__item {
+					font-size: 36px;
+					font-weight: bold;
+				}
+			</style>
+		</section>
 
 	<section class="slide">
 			<h2>Напиши мне</h2>
@@ -131,127 +289,6 @@
 			
 			.questions__img {
 				width: 100%;
-			}
-		</style>
-	</section>
-
-	<section class="slide">
-		<h2>Two columns if you like</h2>
-		<div class="columns two">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-		</div>
-	</section>
-
-	<section class="slide">
-		<h2>All kind of lists</h2>
-		<ol>
-			<li>Simple lists are marked with bullets</li>
-			<li>Ordered lists begin with a number</li>
-			<li>You can even nest lists one inside another
-				<ul>
-					<li>Or mix their types</li>
-					<li>But do not go too far</li>
-					<li>Otherwise audience will be bored</li>
-				</ul>
-			</li>
-			<li>Look, seven rows exactly!</li>
-		</ol>
-	</section>
-
-	<section class="slide">
-		<h2>Code samples</h2>
-		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code class="mark">&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
-		</pre>
-	</section>
-
-	<section class="slide">
-		<h2>Even tables</h2>
-		<table>
-		<tr>
-			<th scope="col">Locavore</th>
-			<th>Umami</th>
-			<th>Helvetica</th>
-			<th>Vegan</th>
-		</tr>
-		<tr>
-			<th scope="row">Fingerstache</th>
-			<td>Kale</td>
-			<td>Chips</td>
-			<td>Keytar</td>
-		</tr>
-		<tr>
-			<th scope="row">Sriracha</th>
-			<td>Gluten-free</td>
-			<td>Ennui</td>
-			<td>Keffiyeh</td>
-		</tr>
-		<tr>
-			<th scope="row">Thundercats</th>
-			<td>Jean</td>
-			<td>Shorts</td>
-			<td>Biodiesel</td>
-		</tr>
-		<tr>
-			<th scope="row">Terry</th>
-			<td>Richardson</td>
-			<td>Swag</td>
-			<td>Blog</td>
-		</tr>
-		</table>
-		<p>It’s good to have information organized.</p>
-	</section>
-
-	<section class="slide" id="picture">
-		<h2>Pictures</h2>
-		<figure>
-			<img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
-			<figcaption class="copyright right white">
-				<a href="http://fiftyfootshadows.net/">© John Carey</a>
-			</figcaption>
-		</figure>
-		<style>
-			#picture h2 {
-				color: white;
-			}
-		</style>
-	</section>
-
-	<section class="slide">
-		<h2 class="shout shrink">You can even shout this way</h2>
-	</section>
-
-	<section class="slide">
-		<h2>Inner navigation</h2>
-		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
-		</ol>
-	</section>
-
-	<section class="slide" id="see-more">
-		<h2 class="shout">
-			<img src="pictures/logo.svg" alt="Shower logo">
-			<a href="https://github.com/shower/shower">See more on GitHub</a>
-		</h2>
-		<style>
-			#see-more h2 {
-				font-size: 100px
-			}
-
-			#see-more img {
-				width: 0.72em;
-				height: 0.72em;
 			}
 		</style>
 	</section>
